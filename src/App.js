@@ -12,11 +12,17 @@ function App() {
   const onDecrease = () => {
     setCount(count -1)
   }
+  const minus = () => {
+    if(count > 5){
+    setCount(count - 5)
+    }
+  }
   return (
     <div className="App">
       <Count count={count}/>
      <button onClick={onIncrease}>increase</button>
      <button onClick={onDecrease} disabled={count === 0}>decrease</button>
+     <button onClick={minus}>-5</button>
     </div>
   );
 }
